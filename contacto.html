@@ -49,34 +49,38 @@
                 <a class="nav-link" href="mapa.html">Mapa</a>
               </li>
             </ul>
+            <audio preload="auto" autoplay loop controls type="audio/mpeg">
+              <source src="./src/multimedia/audio/chill-future-bass-music-no-copyright.mp3" />
+            </audio>
           </div>
         </div>
       </nav>
     </header>
-    <section>
-      <h1> Contactanos </h1>
+    
+    <main>
+      <section>
+        <h1> Contactanos </h1>
+  
+        <form onsubmit="submitContact()">
+          <div class="form-group">
+            <label for="form_email">Correo electrónico</label>
+            <input required type="email" class="form-control" id="form_email" aria-describedby="emailHelp" placeholder="Ingresa un correo válido">          
+          </div>
+          <div class="form-group">
+            <label for="form_asunto">Asunto</label>
+            <input required type="text" class="form-control" id="form_asunto" aria-describedby="emailHelp" placeholder="Asunto ...">
+          </div>
+          <div class="form-group">
+            <label for="form_mensaje">Comentario</label>
+            <textarea required class="form-control" id="form_mensaje" rows="3" placeholder="Comentario ..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+  
+  
+      </section>
+    </main>
 
-      <form onsubmit="submitContact()">
-        <div class="form-group">
-          <label for="form_email">Correo electrónico</label>
-          <input required type="email" class="form-control" id="form_email" aria-describedby="emailHelp" placeholder="Ingresa un correo válido">          
-        </div>
-        <div class="form-group">
-          <label for="form_asunto">Asunto</label>
-          <input required type="text" class="form-control" id="form_asunto" aria-describedby="emailHelp" placeholder="Asunto ...">
-        </div>
-        <div class="form-group">
-          <label for="form_mensaje">Comentario</label>
-          <textarea required class="form-control" id="form_mensaje" rows="3" placeholder="Comentario ..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-
-
-    </section>
-
-    <audio preload="auto" autoplay loop></audio>
-    <script src="./src/javascript/audio.js"></script>
     <script src="./src/javascript/contact.js" ></script>
   </body>
 </html>
