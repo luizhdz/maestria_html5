@@ -1,4 +1,4 @@
-[
+var data = [
 	{
 		"name": "Ópera de Syndey",
 		"country": "Australia",

@@ -51,22 +51,21 @@
 )()
 
 function getMarkersAndInfo() {
-  return fetch("/src/data/architecture.json")
-    .then((resp) => resp.json())
-    .then((data) => {
-			var markers = [];
-			var infoWindowContent = [];
-
-			for (const item of data) {
-				if(item.lat){
-					markers.push([item.name+", "+item.country, item.lat, item.lon ])
-					var infoContent = '<div class="info_content">'
-					infoContent += '<h3>'+item.name+'</h3>'
-					infoContent += '<p>'+item.description+'</>'
-					infoContent += '</div>'
-					infoWindowContent.push([infoContent])
-				}
+	return new Promise((resolve)=>{
+		var markers = [];
+		var infoWindowContent = [];
+	
+		for (const item of data) {
+			if(item.lat){
+				markers.push([item.name+", "+item.country, item.lat, item.lon ])
+				var infoContent = '<div class="info_content">'
+				infoContent += '<h3>'+item.name+'</h3>'
+				infoContent += '<p>'+item.description+'</>'
+				infoContent += '</div>'
+				infoWindowContent.push([infoContent])
 			}
-			return {markers, infoWindowContent}
-		});
+		}
+		resolve({markers, infoWindowContent})
+
+	})
 }

@@ -8,16 +8,9 @@ function loadTable(){
 	const table = document.querySelector("table#main_table")
 	var tbody =  table.querySelector("tbody")
 
-	fetch("/src/data/architecture.json")
-	.then(resp => resp.json())
-	.then(data => {
-		
-		for (const item of data) {
-			appendRow(tbody, [item.img ,item.name, item.country, item.description])			
-		}
-		
-		
-	})
+	for (const item of data) {
+		appendRow(tbody, [item.img ,item.name, item.country, item.description])			
+	}
 }
 
 function appendRow(tbody, cells){
@@ -27,7 +20,7 @@ function appendRow(tbody, cells){
 		var content;
 		if(cell.split(".").pop() == "jpg" ){
 			content = document.createElement("img")
-			content.src = "/src/img/"+cell
+			content.src = "./src/img/"+cell
 			content.className = "img-thumbnail"
 		}else{
 			content = document.createTextNode(cell);
