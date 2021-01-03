@@ -1,0 +1,46 @@
+:root{
+    --backgroud_list_color: #f4f7f8;
+    --backgroud_list_color_hover: #e4f2f7;
+
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+}
+
+main aside{    
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main aside ul{
+    height: 500px;
+    overflow-y: auto;    
+    font-weight: 600;
+}
+
+main aside ul li{
+    padding: 8px;
+    list-style-type: none;
+    background-color: var(--backgroud_list_color);
+    border-bottom: 1px solid slategrey;
+    cursor: auto;
+
+}
+
+
+main aside ul li:hover{
+    background-color: var(--backgroud_list_color_hover);
+}

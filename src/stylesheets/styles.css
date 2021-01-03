@@ -1,8 +1,14 @@
-#mapCanvas{
-    min-height: 500px;
-    max-width: 900px;
-    margin: 0 auto;
+:root{
+    --footer_height: calc(8px * 6);
+    --background-black: #212529;
 }
+
+main{
+    max-height: calc(100% - var(--footer_height))!important;
+    overflow-y: auto;
+}
+
+
 nav{
     margin-bottom: 16px;
 }
@@ -15,12 +21,21 @@ video{
     height: 500px;
 }
 
-form{
-    max-width: 600px;
-    margin: 0 auto;
+
+footer{
+    padding: 8px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer_height);
+    background-color: var(--background-black);
+    color: blanchedalmond;
+    letter-spacing: 2px;
 }
 
-form button{
-    margin-top: 8px;
-
+footer a:link{
+    text-decoration: none;
+    color: rgb(125, 122, 163);
+    font-weight: 600;
 }

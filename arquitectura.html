@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/stylesheets/styles.css" />
+    <link rel="stylesheet" href="src/stylesheets/arquitectura.css" />
   </head>
   <body>
     <header>
@@ -49,7 +50,7 @@
                 <a class="nav-link" href="mapa.html">Mapa</a>
               </li>
             </ul>
-            <audio autoplay loop controls type="audio/mpeg">
+            <audio loop controls>
               <source src="./src/multimedia/audio/no-copyright-music-chill-lofi-hip-hop-distant-copyright-free-music.mp3" />
             </audio>
           </div>
@@ -60,19 +61,22 @@
     <main>
       <section>
         <h1> Tabla con detalles </h1>
-        <table id="main_table" class="table table-striped" >
-          <thead>
-            <tr>
-              <th>Imagen</th>
-              <th>Nombre</th>
-              <th>País</th>
-              <th>Descripción</th>
-            </tr>
-            </tr>
-          </thead>
-          <tbody>	
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table id="main_table" class="table table-striped" >
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>País</th>
+                <th>Descripción</th>
+              </tr>
+              </tr>
+            </thead>
+            <tbody>	
+            </tbody>
+          </table>
+        </div>
+
       </section>
     </main>
     <footer>

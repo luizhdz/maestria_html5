@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+}
+
+#mapCanvas{
+    min-height: 500px;
+    min-width: 750px;
+    max-width: 900px;
+}
